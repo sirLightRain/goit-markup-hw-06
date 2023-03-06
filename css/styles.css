@@ -118,14 +118,6 @@ button {
     color: var(--dark-color);
 }
 
-/* Text style for befor effect in nav */
-/* .medium-text-nav {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--dark-color);
-} */
-
 /* Footer text */
 .footer-text {
     
@@ -511,6 +503,15 @@ button {
     background-color: var(--success-color);    
 }
 
+.subscribe-form {
+    width: 25%;
+    height: 20px;
+    margin-top: 40px;
+    margin-left: 20px;
+    background-color: teal;
+    outline: 1px solid tomato;
+}
+
 /* ====================== Adress Activation ====================== */
 
 .adress-nav {
@@ -671,7 +672,8 @@ button {
 
 /* --- Стан, коли вікно modal показане --- */
 .modal {
-    
+    /* display: flex; */
+    flex-direction: column;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -718,4 +720,33 @@ button {
 .modal-close-btm:hover .modal-close-btm-icon,
 .modal-close-btm:focus .modal-close-btm-icon {
     fill: var(--dark-color);    
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.contact-form-input {
+    /* display: flex; */
+    width: 100%;
+    /* padding-top: 20px; */
+    margin-bottom: 20px;
+}
+
+.contact-form-btm-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form-msg {
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    resize: none;
+}
+
+.contact-customers-agreement {
+    display: flex;
 }
