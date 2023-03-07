@@ -447,15 +447,34 @@
             </div>
 
             <!-- ============================= Footer Subscribe form. ============================= -->
-            <form class="subscribe-form">
+            
+            <div class="footer-subscribe-form">
+                <p class="medium-text-footer-social">Subscribe</p>
+                <label class="footer-input-area">
+                    
+                    <input 
+                        type="text"
+                        name="user_email" 
+                        type="email" 
+                        class="footer-email-input" 
+                        placeholder="E-mail"
+                    />
+                    <button type="submit" class="subscribe-button">Subscribe
+                        <svg class="subscribe-btm-icon" width="24" height="20">
+                            <use href="/images/icons.svg#icon-plane"></use>
+                        </svg>
+                    </button>
+                    
+                </label>
                 
-            </form>
+            </div>
+
         </div>
           
     </footer>
 
     <!-- ============================= Modal windov. ============================= -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             
             <!-- ============================= Closing buttom. ============================= -->
@@ -467,57 +486,91 @@
 
             <!-- ============================= Modal window contacts form. ============================= -->
             <form class="contact-form">
-                <p class="medium-text">Leave your contacts and we will call you back</p>
+                <p class="medium-text-modal">Leave your contacts and we will call you back</p>
 
                 <label class="contact-form-label">
                     
                     <span class="contact-form-text-description">Name</span>
-                    <input 
-                        type="text" 
-                        class="contact-form-input" 
-                        placeholder="Alex Stepchuk" 
-                        name="name" 
-                        required
-                        minlength="2"                        
-                    />
+                    <span class="modal-form-input-wrapper">
+                        <input 
+                            name="user_name" 
+                            type="text" 
+                            class="contact-form-input" 
+                            placeholder="Alex Stepchuk" 
+                            required
+                            minlength="2" 
+                            required    
+                            pattern="[a-zA-Zа-яА-Я]+"                   
+                        />
+    
+                        <svg class="modal-form-input-icon">
+                            <use href="./images/icons.svg#icon-man" class=""></use>
+                        </svg>
+                    </span>
+
                 </label>
 
                <label  class="contact-form-label">
                     
                     <span class="contact-form-text-description">Phone</span>
-                    <input 
-                        type="tel" 
-                        class="contact-form-input" 
-                        placeholder="+38(066) 184-20-41" 
-                        title="+38(0xx)-xxx-xx-xx"
-                        name="phone" 
-                        required
-                    />
+                    <span  class="modal-form-input-wrapper">
+                        <input 
+                            name="user_phone" 
+                            type="tel" 
+                            class="contact-form-input" 
+                            placeholder="(066)-184-20-41"                        
+                            required
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                            title="(xxx)-xxx-xx-xx"
+                        />
+    
+                        <svg class="modal-form-input-icon">
+                            <use href="./images/icons.svg#icon-phone" class=""></use>
+                        </svg>
+                    </span>
                </label>
 
                 <label class="contact-form-label">
                     
                     <span class="contact-form-text-description">Email</span>
-                    <input 
-                        type="email" 
-                        class="contact-form-input" 
-                        placeholder="+re!!!!!!!!!cep@ukr.net" 
-                        name="email" 
-                        required
-                    />
+                    <span class="modal-form-input-wrapper">
+                        <input 
+                            name="user_email" 
+                            type="email" 
+                            class="contact-form-input" 
+                            placeholder="+reception@ukr.net"                  
+                        />
+    
+                        <svg class="modal-form-input-icon">
+                            <use href="./images/icons.svg#icon-letter" class=""></use>
+                        </svg>
+                    </span>
                 </label >
 
-                <label class="contact-form-input">
+                <label class="contact-form-label-c">
                     
-                    <span class="contact-form-text-description">Comment</span>
-                    <textarea name="" class="contact-form-msg" placeholder="Text input"></textarea>
+                    <span class="contact-form-text-description">Comment</span><textarea 
+                        name="user_message" 
+                        class="contact-form-msg" 
+                        placeholder="Text input"
+                    ></textarea>
 
                 </label>
 
                 <div class="contact-customers-agreement">
 
-                        <input id="user-policy" type="checkbox" class="customers-check"/>
-                        <label for="user-policy" class="contacn-form-descrition">I accept the terms and conditions of the <a href="">Privacy Policy</a>
+                        <input 
+                            id="user_policy" 
+                            type="checkbox" 
+                            class="customers-check visually-hidden"
+                        />
+                        <label for="user_policy" class="contact-form-text-description-c">
+                            <!-- <span class="modal-form-fake-chekbox">
+                                <svg width="16" height="16">
+                                    <use href="./images/checkmark.svg#icon-letter"></use>
+                                </svg>
+                            </span> -->
+                            I accept the terms and conditions of the&nbsp;<a href="">Privacy Policy</a>
                         </label>
                     
                 </div>
