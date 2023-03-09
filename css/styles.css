@@ -583,10 +583,16 @@ button {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     fill: #fff;
+    transition: background-color var(--transition-var);
 }
 
 .subscribe-btm-icon {
     margin-left: 16px;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+    background-color: var(--pressed-state-color);
 }
 
 /* ====================== Adress Activation ====================== */
@@ -875,7 +881,7 @@ button {
     width: 100%;
     height: 120px;
     padding: 8px 16px;
-    /* margin-bottom: 16px; */
+    
     resize: none;
 
     font-size: 12px;
@@ -886,7 +892,7 @@ button {
     border-radius: 4px; 
 
     transition: border-color var(--transition-var);
-    /* color: rgba(46, 47, 66, 0.4); */
+    
 }
 
 .contact-form-msg::placeholder {
@@ -906,8 +912,6 @@ button {
     margin-bottom: 24px;
 }
 
-
-
 .customers-check {
     display: block;
 }
@@ -925,15 +929,13 @@ button {
     transition: background-image 5000ms linear;
 }
 
-
-
 .customers-check:checked + .contact-form-text-description-c::before {
     background-color: var(--primary-brand-color);
     border-color: var(--primary-brand-color);
     background-image: url(../images/checkmark.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    /* fill: red;  */
+    
 }
 
 .customers-check:focus + .contact-form-text-description-c::before {
