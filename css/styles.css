@@ -120,7 +120,7 @@ button {
 
 /* Footer text */
 .footer-text {
-    
+    min-width: 264px;
     padding-top: 16px;
     font-size: 16px;
     line-height: 1.5;
@@ -536,6 +536,10 @@ button {
     margin-left: 88px;
 }
 
+.subscribe-input-btm-block {
+    display: flex;
+}
+
 .footer-input-area {
     display: flex;
 }
@@ -766,6 +770,7 @@ button {
     padding: 72px 24px 24px 24px;
 
     background-color: var(--modal-window);
+border-radius: 4px;
 }
 /* --- Стан, коли вікно modal приховане --- */
 .backdrop.is-hidden .modal {
@@ -784,12 +789,13 @@ button {
     background-color: var(--accent-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;    
-    transition: border-color var(--transition-var);
+    transition: border-color var(--transition-var), background-color var(--transition-var);
 }
 
 .modal-close-btm:hover,
 .modal-close-btm:focus {
     border-color: var(--subtle-text-color);
+    background-color: var(--primary-brand-color);
 
 }
 
@@ -800,7 +806,7 @@ button {
 
 .modal-close-btm:hover .modal-close-btm-icon,
 .modal-close-btm:focus .modal-close-btm-icon {
-    fill: var(--dark-color);    
+    fill: var(--light-colors);    
 }
 
 /* ---- Modal form ---- */
@@ -844,7 +850,7 @@ button {
     line-height: 1.16;
     letter-spacing: 0.01em;
 
-    border: 1px solid var(--dark-color);
+    border: 1px solid rgba(46, 47, 66, 0.4);;
     border-radius: 4px; 
     transition: border-color var(--transition-var);
 }
@@ -888,7 +894,7 @@ button {
     line-height: 1.16;
     letter-spacing: 0.01em;
 
-    border: 1px solid var(--dark-color);
+    border: 1px solid rgba(46, 47, 66, 0.4);;
     border-radius: 4px; 
 
     transition: border-color var(--transition-var);
@@ -922,11 +928,11 @@ button {
     display: block;
     width: 16px;
     height: 16px;
-    border: 1px solid var(--dark-color);
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     cursor: pointer;
     margin-right: 8px;
-    transition: background-image 5000ms linear;
+    transition: background-color 5000ms linear, border-color 5000ms linear;
 }
 
 .customers-check:checked + .contact-form-text-description-c::before {
@@ -977,6 +983,7 @@ button {
 .modal-form-input-wrapper {
     display: block;
     position: relative;
+    
 }
 
 .contact-form-btm {
@@ -1005,4 +1012,11 @@ button {
 .contact-form-btm:hover {
     background-color: var(--pressed-state-color);
     color: var(--accent-color)
+}
+
+.privacy-policy {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--primary-brand-color);
 }
