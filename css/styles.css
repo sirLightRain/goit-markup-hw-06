@@ -852,6 +852,7 @@ border-radius: 4px;
 
     border: 1px solid rgba(46, 47, 66, 0.4);;
     border-radius: 4px; 
+    background-color: transparent;
     transition: border-color var(--transition-var);
 }
 
@@ -896,7 +897,7 @@ border-radius: 4px;
 
     border: 1px solid rgba(46, 47, 66, 0.4);;
     border-radius: 4px; 
-
+    background-color: transparent;
     transition: border-color var(--transition-var);
     
 }
@@ -938,10 +939,9 @@ border-radius: 4px;
 .customers-check:checked + .contact-form-text-description-c::before {
     background-color: var(--primary-brand-color);
     border-color: var(--primary-brand-color);
-    background-image: url(../images/checkmark.svg);
+    background-image: url('../images/checkmark.svg');
     background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-size: cover; 
 }
 
 .customers-check:focus + .contact-form-text-description-c::before {
